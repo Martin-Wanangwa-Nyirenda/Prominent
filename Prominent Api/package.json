@@ -1,0 +1,9 @@
+{
+  "name": "prominent-api",
+  "version": "0.0.0",
+  "description": "Prominent Api",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}
