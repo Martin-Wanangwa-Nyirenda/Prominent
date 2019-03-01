@@ -19,7 +19,7 @@ namespace Prominent
 
         private void addProjectToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
