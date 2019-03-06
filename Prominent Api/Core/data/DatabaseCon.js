@@ -28,10 +28,6 @@ class DatabaseCon{
             arr = results.map(x => x);
             isDone = true;
         }); 
-
-        while (isDone == false) {er
-            setTimeout(() => { return 0; }, 500);
-        }
         return arr;    
     }
 }
