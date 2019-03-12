@@ -1,7 +1,6 @@
 ﻿'use strict'
 const path = require('path')
 const express = require('express');
-const mysql = require('mysql');
 const app = express();
 const bodyParser = require('body-parser');
 const DatabaseCon = require('./Core/data/DatabaseCon');
@@ -18,9 +17,7 @@ const dbCon = new DatabaseCon('localhost', 'root', 'password', 'prod_demo');
 dbCon.connect();
 
 app.get('/', function (req, res) {
-    let arr = dbCon.getAllProjects();
-    
-    return res.send('1');
+    return dbCon.getAllProjects(res);
 });
 
 app.listen(port, () => {

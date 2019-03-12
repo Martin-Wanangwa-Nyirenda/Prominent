@@ -20,15 +20,13 @@ class DatabaseCon{
         this.connection.connect();
     }
 
-    getAllProjects() {
-        let isDone = false;
+    getAllProjects(res) {
         let arr = [];
         this.connection.query('SELECT * FROM projects', function(error, results){
             if (error) throw error; 
             arr = results.map(x => x);
-            isDone = true;
-        }); 
-        return arr;    
+            return res.send(arr);
+        });  
     }
 }
 
